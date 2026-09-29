@@ -1,0 +1,442 @@
+{
+  "@@locale": "en",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "clear": "Clear",
+  "back": "Back",
+  "backTo": "Back: {label}",
+  "@backTo": {
+    "placeholders": {
+      "label": {}
+    }
+  },
+  "cancel": "Cancel",
+  "save": "Save",
+  "done": "Done",
+  "retry": "Retry",
+  "erase": "Delete",
+  "digitsEntered": "Digits entered: {count}",
+  "@digitsEntered": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "delete": "Delete",
+  "edit": "Edit",
+  "change": "Change",
+  "copy": "Copy",
+  "next": "Next",
+  "nothingFound": "Nothing found",
+  "noGroup": "No group",
+  "search": "Search",
+  "errTimeout": "The server is not responding. Check your connection.",
+  "errCertificate": "Invalid server certificate.",
+  "errNoConnection": "No connection to the server.",
+  "err401": "Session expired. Sign in again.",
+  "err403": "Not enough permissions.",
+  "err404": "Not found.",
+  "err429": "Too many attempts. Please wait a bit.",
+  "errServer": "Server error ({code}).",
+  "@errServer": {
+    "placeholders": {
+      "code": {}
+    }
+  },
+  "errNotPolyCreds": "No PolyCreds server found at this address.",
+  "errLoginExpired": "Sign-in session expired. Sign in again.",
+  "durationSeconds": "{n} s",
+  "@durationSeconds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMinutes": "{n} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "afterDuration": "After {duration}",
+  "@afterDuration": {
+    "placeholders": {
+      "duration": {}
+    }
+  },
+  "immediately": "Immediately",
+  "never": "Never",
+  "clipboardWillClear": "Clipboard will be cleared in {duration}",
+  "@clipboardWillClear": {
+    "placeholders": {
+      "duration": {}
+    }
+  },
+  "copiedPassword": "Password copied",
+  "copiedLogin": "Login copied",
+  "copiedHost": "Host copied",
+  "copiedCommand": "Command copied",
+  "copiedText": "Text copied",
+  "credentialsCount": "{count, plural, one{{count} credential} other{{count} credentials}}",
+  "@credentialsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "notesCount": "{count, plural, one{{count} note} other{{count} notes}}",
+  "@notesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "activeNow": "Active now",
+  "neverUsed": "Not used yet",
+  "activeMinutesAgo": "{n, plural, one{Active {n} minute ago} other{Active {n} minutes ago}}",
+  "@activeMinutesAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "activeHoursAgo": "{n, plural, one{Active {n} hour ago} other{Active {n} hours ago}}",
+  "@activeHoursAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "activeDaysAgo": "{n, plural, one{Active {n} day ago} other{Active {n} days ago}}",
+  "@activeDaysAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "activeWeeksAgo": "{n, plural, one{Active {n} week ago} other{Active {n} weeks ago}}",
+  "@activeWeeksAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "activeOn": "Active {date}",
+  "@activeOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "setDigits": "Digits",
+  "setLower": "Lowercase letters",
+  "setUpper": "Uppercase letters",
+  "setSymbols": "Symbols",
+  "setExtended": "Extended symbols",
+  "strengthWeak": "Weak",
+  "strengthFair": "Fair",
+  "strengthGood": "Good",
+  "strengthStrong": "Strong",
+  "strengthVeryStrong": "Very strong",
+  "strengthBits": "{label} · ~{bits} bits",
+  "@strengthBits": {
+    "placeholders": {
+      "label": {},
+      "bits": {
+        "type": "int"
+      }
+    }
+  },
+  "appTagline": "Your passwords, server credentials and notes. Everything is encrypted on the server you choose.",
+  "serverSection": "Server",
+  "cloudDefault": "PolyCreds cloud · default",
+  "ownServer": "Own server",
+  "selfHosted": "Self-hosted PolyCreds",
+  "serverAddress": "Server address",
+  "enterServer": "Enter the server address",
+  "continueAction": "Continue",
+  "serverChangeLater": "You can change the address later in settings",
+  "enterEmail": "Enter your e-mail",
+  "enterPassword": "Enter your password",
+  "loginTitle": "Sign in",
+  "email": "E-mail",
+  "password": "Password",
+  "signIn": "Sign in",
+  "loginFooter": "Sign-up and password reset are in the PolyCreds web version",
+  "enter6Digits": "Enter the 6 digits from the e-mail",
+  "codeResent": "Code sent again",
+  "codeTitle": "Code from e-mail",
+  "codeSentPrefix": "We sent a 6-digit code to ",
+  "codeSentSuffix": ". Enter it to confirm sign-in.",
+  "resendIn": "Resend in ",
+  "resendCode": "Resend code",
+  "confirm": "Confirm",
+  "codeFooter": "No e-mail? Check the Spam folder. You can resend up to 3 times a minute.",
+  "pinMismatch": "PINs do not match. Try again",
+  "stepOf": "Step {step} of 2",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      }
+    }
+  },
+  "createPin": "Create a PIN",
+  "repeatPin": "Repeat the PIN",
+  "pinCreateHint": "It unlocks the app on this device. You won't need your account password.",
+  "pinRepeatHint": "Enter the same PIN again.",
+  "pinDigitsHint": "4 to 6 digits",
+  "enterPin": "Enter PIN",
+  "wrongPin": "Wrong PIN. Attempts left: {n}",
+  "@wrongPin": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "signInWithPassword": "Sign in with password",
+  "signOut": "Sign out",
+  "tabVault": "Vault",
+  "tabNotes": "Notes",
+  "tabGenerator": "Generator",
+  "tabProfile": "Profile",
+  "searchVaultHint": "Search credentials and notes",
+  "allCount": "All · {n}",
+  "@allCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "favorites": "Favorites",
+  "sites": "Websites",
+  "servers": "Servers",
+  "newGroup": "New group",
+  "newCredential": "New credential",
+  "groups": "Groups",
+  "favoritesHint": "Star credentials to keep them at hand",
+  "emptyTitle": "Nothing here yet",
+  "emptyText": "Add your first credential: a login and password for a website or server. Groups help keep things tidy.",
+  "addCredential": "Add credential",
+  "createGroup": "Create group",
+  "copyPassword": "Copy password",
+  "copyLogin": "Copy login",
+  "copyHost": "Copy host",
+  "editGroup": "Edit group",
+  "newCredentialInGroup": "New credential in group",
+  "byName": "By name",
+  "byDate": "By date",
+  "groupNoCredentials": "No credentials in this group yet",
+  "deleteItemTitle": "Delete “{name}”?",
+  "@deleteItemTitle": {
+    "placeholders": {
+      "name": {}
+    }
+  },
+  "deleteCredentialText": "The login, password and note will be deleted permanently.",
+  "connectionCommand": "Connection command",
+  "note": "Note",
+  "modifiedOn": "Modified {date}",
+  "@modifiedOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "deleteCredential": "Delete credential",
+  "removeFavorite": "Remove from favorites",
+  "addFavorite": "Add to favorites",
+  "login": "Login",
+  "link": "Link",
+  "openLink": "Open link",
+  "host": "Host",
+  "port": "Port",
+  "protocol": "Protocol",
+  "cantOpenLink": "Could not open the link",
+  "enterName": "Enter a name",
+  "enterLogin": "Enter a login",
+  "enterHost": "Enter a host",
+  "portRange": "Port from 1 to 65535",
+  "group": "Group",
+  "editCredential": "Edit credential",
+  "siteTab": "Website",
+  "serverTab": "Server · SSH/FTP",
+  "name": "Name",
+  "generatePassword": "Generate password",
+  "credentialNoteHint": "Backup codes, hints, anything else",
+  "deleteGroupTitle": "Delete group “{name}”?",
+  "@deleteGroupTitle": {
+    "placeholders": {
+      "name": {}
+    }
+  },
+  "deleteEmptyGroupText": "The group is empty. This cannot be undone.",
+  "deleteGroupText": "{items} will be deleted with the group. They cannot be restored.",
+  "@deleteGroupText": {
+    "placeholders": {
+      "items": {}
+    }
+  },
+  "deleteGroup": "Delete group",
+  "groupTitle": "Group",
+  "whatStored": "What the group holds",
+  "credentials": "Credentials",
+  "credentialsDesc": "Logins and passwords for websites and servers",
+  "notes": "Notes",
+  "notesDesc": "Formatted text",
+  "groupContains": "The group has {items}. ",
+  "@groupContains": {
+    "placeholders": {
+      "items": {}
+    }
+  },
+  "groupTypeHint": "The group type decides where it is shown: on the “Vault” or “Notes” tab.",
+  "credentialsN": "Credentials · {n}",
+  "@credentialsN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "notesN": "Notes · {n}",
+  "@notesN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "groupsN": "Groups · {n}",
+  "@groupsN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "searchHint": "Search by credential, note and group names",
+  "generatedPassword": "Generated password",
+  "refresh": "Refresh",
+  "use": "Use",
+  "length": "Length",
+  "newNote": "New note",
+  "newNoteGroup": "New note group",
+  "noNotes": "No notes yet",
+  "searchNotesHint": "Search notes",
+  "more": "More",
+  "copyText": "Copy text",
+  "deleteNote": "Delete note",
+  "deleteNoteText": "The note will be deleted permanently.",
+  "noteModifiedOn": "modified {date}",
+  "@noteModifiedOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "emptyNote": "Empty note",
+  "enterNoteTitle": "Enter a note title",
+  "noteBodyHint": "Note text",
+  "removeLink": "Remove",
+  "fmtBold": "Bold",
+  "fmtItalic": "Italic",
+  "fmtUnderline": "Underline",
+  "fmtHeading": "Heading",
+  "fmtBulletList": "Bulleted list",
+  "fmtNumberedList": "Numbered list",
+  "fmtCode": "Code",
+  "logoutTitle": "Sign out?",
+  "logoutText": "The PIN on this device will be reset. To sign in you will need your password and a code from e-mail.",
+  "logout": "Sign out",
+  "personalData": "Personal data",
+  "devices": "Devices",
+  "securitySettings": "Security and settings",
+  "version": "Version",
+  "openWeb": "Open web version",
+  "min2Chars": "At least 2 characters",
+  "min6Chars": "At least 6 characters",
+  "passwordsMismatch": "Passwords do not match",
+  "enterCurrentPassword": "Enter your current password",
+  "dataSaved": "Changes saved",
+  "userName": "Name",
+  "emailHelper": "Sign-in codes are sent to this address",
+  "changePassword": "Change password",
+  "newPassword": "New password",
+  "repeatPassword": "Repeat password",
+  "currentPassword": "Current password",
+  "currentPasswordHelper": "Required to change e-mail or password",
+  "changeServerTitle": "Change server?",
+  "changeServerText": "The current session on this device will end. Then choose a server and sign in again.",
+  "changeServer": "Change server",
+  "settings": "Settings",
+  "security": "Security",
+  "changePin": "Change PIN",
+  "autoLock": "Auto-lock",
+  "clipboardClear": "Clear clipboard",
+  "appearance": "Appearance",
+  "theme": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "language": "Language",
+  "serverChangeNote": "Changing the server ends the current session on this device.",
+  "languageSystem": "Same as system",
+  "languageNow": "Now: {language}",
+  "@languageNow": {
+    "placeholders": {
+      "language": {}
+    }
+  },
+  "languageRussianInline": "Russian",
+  "languageEnglishInline": "English",
+  "languageRussianOther": "Russian",
+  "languageEnglishOther": "Английский",
+  "languageNote": "The language changes right away, no restart needed. Vault entries are not translated.",
+  "languageGroup": "Interface language",
+  "auto": "AUTO",
+  "terminateOthersTitle": "End other sessions?",
+  "terminateOthersText": "Ended devices will need to sign in again with a code from e-mail.",
+  "terminate": "End",
+  "terminatedN": "Sessions ended: {n}",
+  "@terminatedN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "thisDevice": "This device",
+  "otherSessions": "Other sessions · {n}",
+  "@otherSessions": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "noOtherSessions": "No other active sessions",
+  "terminateAll": "End all other sessions",
+  "signedInOn": "Signed in {date}",
+  "@signedInOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "createdModified": "Created {created} · modified {modified}",
+  "@createdModified": {
+    "placeholders": {
+      "created": {},
+      "modified": {}
+    }
+  }
+}

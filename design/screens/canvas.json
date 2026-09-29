@@ -353,6 +353,22 @@
       "w": 390,
       "x": 940,
       "y": 4800
+    },
+    "Language.dc.html": {
+      "x": 1880,
+      "y": 4800,
+      "w": 390,
+      "h": 844,
+      "title": "23 Язык",
+      "page": "light"
+    },
+    "LanguageDark.dc.html": {
+      "x": 1880,
+      "y": 4800,
+      "w": 390,
+      "h": 844,
+      "title": "23 Язык",
+      "page": "dark"
     }
   },
   "createdOnFiles": {
@@ -403,7 +419,7 @@
     },
     "de": {
       "kind": "title1",
-      "maxW": 1800,
+      "maxW": 2270,
       "page": "dark",
       "text": "Профиль и настройки",
       "w": 240,
@@ -448,7 +464,7 @@
     },
     "le": {
       "kind": "title1",
-      "maxW": 1800,
+      "maxW": 2270,
       "page": "light",
       "text": "Профиль и настройки",
       "w": 240,
@@ -487,6 +503,7 @@
     "ProfileEdit.dc.html",
     "Settings.dc.html",
     "Sessions.dc.html",
+    "Language.dc.html",
     "ServerDark.dc.html",
     "LoginDark.dc.html",
     "Code2FADark.dc.html",
@@ -508,7 +525,8 @@
     "ProfileDark.dc.html",
     "ProfileEditDark.dc.html",
     "SettingsDark.dc.html",
-    "SessionsDark.dc.html"
+    "SessionsDark.dc.html",
+    "LanguageDark.dc.html"
   ],
   "pages": [
     {
