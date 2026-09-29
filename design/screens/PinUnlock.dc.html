@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Разблокировка</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 110px 24px 36px; display: flex; flex-direction: column; align-items: center; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<img src="/_blob/880b527252f18a1f62276d6bab0a44c3" alt="PolyCreds" style="width: 58px; height: 70px; object-fit: contain">
+<h1 style="margin: 18px 0 4px; font-size: 24px; font-weight: 700">Введите PIN</h1>
+<p style="margin: 0; font-size: 15px; color: {{t.text2}}">poly@example.com</p>
+<div style="margin-top: 30px; display: flex; gap: 18px">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="4">
+<span style="width: 16px; height: 16px; border-radius: 8px; box-sizing: border-box; background: {{d.bg}}; border: 2px solid {{d.bd}}"></span>
+</sc-for>
+</div>
+<p style="margin: 16px 0 0; height: 20px; font-size: 14px; color: {{t.danger}}">Неверный PIN. Осталось попыток: 4</p>
+<div style="flex-grow: 1"></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 28px; width: 300px">
+<sc-for list="{{keys}}" as="k" hint-placeholder-count="12">
+<sc-if value="{{k.num}}" hint-placeholder-val="{{true}}">
+<button style="height: 72px; border-radius: 36px; border: 0; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 30px; font-weight: 500">{{k.v}}</button>
+</sc-if>
+<sc-if value="{{k.blank}}" hint-placeholder-val="{{false}}"><span></span></sc-if>
+<sc-if value="{{k.del}}" hint-placeholder-val="{{false}}">
+<button aria-label="Стереть" style="height: 72px; border: 0; background: transparent; color: {{t.text}}; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h11a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9l-6-7z"></path><path d="m12 9 6 6M18 9l-6 6"></path></svg></button>
+</sc-if>
+</sc-for>
+</div>
+<div style="margin-top: 22px; display: flex; gap: 24px">
+<a href="Login.dc.html" style="min-height: 44px; display: flex; align-items: center; font-size: 15px; font-weight: 600; color: {{t.accent}}; text-decoration: none">Войти по паролю</a>
+<a href="Server.dc.html" style="min-height: 44px; display: flex; align-items: center; font-size: 15px; color: {{t.text2}}; text-decoration: none">Выйти из аккаунта</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+const t=this.props.dark?D:L;
+const dots=[0,0,0,0].map(()=>({bg:'transparent',bd:t.danger}));
+const keys=['1','2','3','4','5','6','7','8','9','','0','del'].map(v=>({v,num:v!==''&&v!=='del',blank:v==='',del:v==='del'}));
+return { t, dots, keys };
+}
+}
+</script>
+</body>
+</html>

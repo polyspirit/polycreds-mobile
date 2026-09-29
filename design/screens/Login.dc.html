@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Вход</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 54px 24px 40px; display: flex; flex-direction: column; gap: 28px; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<div style="height: 44px; display: flex; align-items: center; margin-left: -10px">
+<a href="Server.dc.html" aria-label="Назад" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: {{t.accent}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<img src="/_blob/880b527252f18a1f62276d6bab0a44c3" alt="PolyCreds" style="width: 40px; height: 48px; object-fit: contain; margin-bottom: 4px">
+<h1style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Вход</h1>
+<a href="Server.dc.html" style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: 18px; background: {{t.surface2}}; color: {{t.text}}; text-decoration: none; font-size: 14px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{t.success}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
+polypass.polyspirit.tech
+<span style="color: {{t.accent}}; font-weight: 600">Сменить</span>
+</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 500; color: {{t.text2}}">E-mail</span>
+<input value="poly@example.com" style="height: 52px; padding: 0 14px; border-radius: 12px; border: 2px solid {{t.accent}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 17px; outline: none">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 500; color: {{t.text2}}">Пароль</span>
+<span style="display: flex; align-items: center; height: 52px; padding: 0 4px 0 14px; border-radius: 12px; border: 1px solid {{t.border}}; background: {{t.surface}}; box-sizing: border-box">
+<input type="password" value="correcthorse" style="flex-grow: 1; border: 0; background: transparent; color: {{t.text}}; font: inherit; font-size: 17px; outline: none">
+<button aria-label="Показать пароль" style="width: 44px; height: 44px; border: 0; background: transparent; color: {{t.text2}}; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+</span>
+</label>
+</div>
+<div style="flex-grow: 1"></div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<a href="Code2FA.dc.html" style="height: 54px; border-radius: 14px; background: {{t.accent}}; color: {{t.onAccent}}; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 600; text-decoration: none">Войти</a>
+<p style="margin: 0; text-align: center; font-size: 14px; line-height: 1.45; color: {{t.text2}}">Регистрация и сброс пароля — в веб-версии PolyCreds</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+return { t: this.props.dark ? D : L };
+}
+}
+</script>
+</body>
+</html>

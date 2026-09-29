@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Пустое хранилище</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 62px 20px 84px; display: flex; flex-direction: column; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Хранилище</h1>
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding-bottom: 40px">
+<div style="position: relative; width: 120px; height: 120px; margin-bottom: 10px">
+<div style="position: absolute; left: 0; top: 18px; width: 84px; height: 84px; border-radius: 24px; background: {{t.surface2}}; transform: rotate(-8deg)"></div>
+<div style="position: absolute; right: 0; top: 0; width: 92px; height: 92px; border-radius: 26px; background: {{t.accent}}; color: {{t.onAccent}}; display: flex; align-items: center; justify-content: center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"></path></svg></div>
+</div>
+<h2 style="margin: 0; font-size: 24px; font-weight: 700">Здесь пока пусто</h2>
+<p style="margin: 0; max-width: 300px; font-size: 16px; line-height: 1.5; color: {{t.text2}}">Добавьте первый доступ: логин и пароль от сайта или сервера. Группы помогут навести порядок.</p>
+<div style="margin-top: 12px; align-self: stretch; display: flex; flex-direction: column; gap: 10px; padding: 0 20px">
+<a href="CredentialEdit.dc.html" style="height: 52px; border-radius: 14px; background: {{t.accent}}; color: {{t.onAccent}}; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 16px; font-weight: 600; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Добавить доступ</a>
+<a href="GroupEdit.dc.html" style="height: 52px; border-radius: 14px; background: {{t.surface}}; border: 1px solid {{t.border}}; color: {{t.text}}; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 16px; font-weight: 600; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Создать группу</a>
+</div>
+</div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 84px; box-sizing: border-box; padding: 8px 8px 26px; display: flex; background: {{t.tab}}; border-top: 1px solid {{t.border}}">
+<a href="Main.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.accent}}; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"></path></svg>Хранилище</a>
+<a href="Notes.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Заметки</a>
+<a href="Generator.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01" stroke-width="3"></path></svg>Генератор</a>
+<a href="Profile.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Профиль</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+return { t: this.props.dark ? D : L };
+}
+}
+</script>
+</body>
+</html>

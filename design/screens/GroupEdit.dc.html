@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Редактирование группы</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 54px 20px 40px; display: flex; flex-direction: column; gap: 20px; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<div style="height: 44px; display: flex; align-items: center; justify-content: space-between; margin: 0 -10px">
+<a href="Group.dc.html" style="height: 44px; display: flex; align-items: center; padding: 0 10px; color: {{t.accent}}; text-decoration: none; font-size: 17px">Отмена</a>
+<h1 style="margin: 0; font-size: 17px; font-weight: 700">Группа</h1>
+<a href="Group.dc.html" style="height: 44px; display: flex; align-items: center; padding: 0 10px; color: {{t.accent}}; text-decoration: none; font-size: 17px; font-weight: 700">Готово</a>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 500; color: {{t.text2}}">Название</span>
+<input value="Работа" style="height: 52px; padding: 0 14px; border-radius: 12px; border: 2px solid {{t.accent}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 17px; outline: none">
+</label>
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="padding: 0; margin-bottom: 8px; font-size: 13px; font-weight: 500; color: {{t.text2}}">Что хранится в группе</legend>
+<button aria-pressed="true" style="display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 16px; border: 2px solid {{t.accent}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; text-align: left">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: {{t.accentSoft}}; color: {{t.accent}}; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Доступы</span><span style="font-size: 14px; color: {{t.text2}}">Логины и пароли к сайтам и серверам</span></span>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{t.accent}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>
+</button>
+<button aria-pressed="false" style="display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 16px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; text-align: left">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: {{t.surface2}}; color: {{t.text2}}; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 600">Заметки</span><span style="font-size: 14px; color: {{t.text2}}">Текст с форматированием</span></span>
+</button>
+</fieldset>
+<div style="display: flex; gap: 10px; padding: 14px 16px; border-radius: 14px; background: {{t.surface2}}; font-size: 14px; line-height: 1.45; color: {{t.text2}}">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
+<span>В группе 12 доступов. Тип группы влияет на то, где она показывается: во вкладке «Хранилище» или «Заметки».</span>
+</div>
+<div style="flex-grow: 1"></div>
+<button style="height: 52px; border-radius: 14px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.danger}}; font: inherit; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-13M9 7V4h6v3"></path></svg>Удалить группу</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+return { t: this.props.dark ? D : L };
+}
+}
+</script>
+</body>
+</html>

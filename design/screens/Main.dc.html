@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Хранилище</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; display: flex; flex-direction: column; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<div style="padding: 62px 20px 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Хранилище</h1>
+<div style="display: flex; gap: 8px">
+<button aria-label="Новая группа" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.text}}; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M12 10v6M9 13h6"></path></svg></button>
+<button aria-label="Новый доступ" style="width: 44px; height: 44px; border-radius: 22px; border: 0; background: {{t.accent}}; color: {{t.onAccent}}; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; border-radius: 12px; background: {{t.surface2}}; color: {{t.text3}}; box-sizing: border-box">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<input placeholder="Поиск по доступам и заметкам" style="flex-grow: 1; border: 0; background: transparent; font: inherit; font-size: 16px; color: {{t.text}}; outline: none">
+</label>
+<div style="display: flex; gap: 8px">
+<button style="height: 34px; padding: 0 14px; border-radius: 17px; border: 0; background: {{t.text}}; color: {{t.bg}}; font: inherit; font-size: 14px; font-weight: 600">Все · 31</button>
+<button style="height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 14px">Избранное</button>
+<button style="height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 14px">Сайты</button>
+<button style="height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid {{t.border}}; background: {{t.surface}}; color: {{t.text}}; font: inherit; font-size: 14px">Серверы</button>
+</div>
+</div>
+<div style="padding: 20px 20px 0; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: {{t.text2}}">Избранное</div>
+<div style="display: flex; gap: 10px">
+<div style="flex: 1; padding: 14px; border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: {{t.accentSoft}}; color: {{t.accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700">G</div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="{{t.star}}" stroke="{{t.star}}" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"></path></svg>
+</div>
+<div>
+<div style="font-size: 16px; font-weight: 600">GitHub</div>
+<div style="font-size: 13px; color: {{t.text2}}">polyspirit</div>
+</div>
+</div>
+<div style="flex: 1; padding: 14px; border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: {{t.successSoft}}; color: {{t.success}}; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"></rect><rect x="3" y="13" width="18" height="7" rx="2"></rect><path d="M7 7.5h.01M7 16.5h.01"></path></svg></div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="{{t.star}}" stroke="{{t.star}}" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"></path></svg>
+</div>
+<div>
+<div style="font-size: 16px; font-weight: 600">Prod · web-01</div>
+<div style="font-size: 13px; color: {{t.text2}}">SSH · root</div>
+</div>
+</div>
+</div>
+</div>
+<div style="padding: 22px 20px 0; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: {{t.text2}}">Группы</div>
+<div style="border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; overflow: hidden">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+<a href="Group.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 14px; text-decoration: none; color: {{t.text}}; border-top: {{g.sep}}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{t.accent}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+<span style="flex-grow: 1; font-size: 16px">{{g.name}}</span>
+<span style="font-size: 14px; color: {{t.text2}}">{{g.count}}</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{t.text3}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+</a>
+</sc-for>
+</div>
+</div>
+<div style="padding: 22px 20px 0; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: {{t.text2}}">Без группы</div>
+<div style="border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 6px 0 14px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: {{t.surface2}}; color: {{t.text}}; display: flex; align-items: center; justify-content: center; font-weight: 700">Я</div>
+<div style="flex-grow: 1">
+<div style="font-size: 16px; font-weight: 500">Яндекс ID</div>
+<div style="font-size: 13px; color: {{t.text2}}">poly@yandex.ru</div>
+</div>
+<button aria-label="Скопировать пароль" style="width: 44px; height: 44px; border: 0; background: transparent; color: {{t.text2}}; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8"></path></svg></button>
+</div>
+</div>
+</div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 84px; box-sizing: border-box; padding: 8px 8px 26px; display: flex; background: {{t.tab}}; border-top: 1px solid {{t.border}}">
+<a href="Main.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.accent}}; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"></path></svg>Хранилище</a>
+<a href="Notes.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Заметки</a>
+<a href="Generator.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01" stroke-width="3"></path></svg>Генератор</a>
+<a href="Profile.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Профиль</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+const t=this.props.dark?D:L;
+const groups=[['Работа',12],['Серверы',7],['Личное',8],['Финансы',3]].map((g,i)=>({name:g[0],count:g[1],sep:i?'1px solid '+t.border:'0'}));
+return { t, groups };
+}
+}
+</script>
+</body>
+</html>

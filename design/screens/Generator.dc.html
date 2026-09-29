@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Генератор паролей</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 62px 20px 0; display: flex; flex-direction: column; gap: 18px; background: {{t.bg}}; color: {{t.text}}; font-family: Onest, system-ui, sans-serif">
+<h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Генератор</h1>
+<div style="padding: 20px 18px 16px; border-radius: 20px; background: {{t.surface}}; border: 1px solid {{t.border}}; display: flex; flex-direction: column; gap: 16px">
+<div aria-label="Сгенерированный пароль" style="min-height: 64px; font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 500; line-height: 1.35; word-break: break-all; text-align: center"><sc-for list="{{chars}}" as="c" hint-placeholder-count="20"><span style="color: {{c.color}}">{{c.v}}</span></sc-for></div>
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="flex-grow: 1; display: flex; gap: 4px"><span style="flex: 1; height: 5px; border-radius: 3px; background: {{t.success}}"></span><span style="flex: 1; height: 5px; border-radius: 3px; background: {{t.success}}"></span><span style="flex: 1; height: 5px; border-radius: 3px; background: {{t.success}}"></span><span style="flex: 1; height: 5px; border-radius: 3px; background: {{t.success}}"></span></div>
+<span style="font-size: 13px; font-weight: 600; color: {{t.success}}">Очень надёжный · ~123 бита</span>
+</div>
+<div style="display: flex; gap: 10px">
+<button style="flex: 1; height: 50px; border-radius: 14px; border: 0; background: {{t.surface2}}; color: {{t.text}}; font: inherit; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"></path></svg>Обновить</button>
+<button style="flex: 1; height: 50px; border-radius: 14px; border: 0; background: {{t.accent}}; color: {{t.onAccent}}; font: inherit; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8"></path></svg>Копировать</button>
+</div>
+</div>
+<div style="padding: 14px 16px; border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<label for="len" style="font-size: 16px; font-weight: 500">Длина</label>
+<span style="min-width: 44px; height: 30px; border-radius: 8px; background: {{t.accentSoft}}; color: {{t.accent}}; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600">20</span>
+</div>
+<input id="len" type="range" min="4" max="64" value="20" style="width: 100%; height: 28px; margin: 0; accent-color: {{t.accent}}">
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: {{t.text2}}"><span>4</span><span>64</span></div>
+</div>
+<div style="border-radius: 16px; background: {{t.surface}}; border: 1px solid {{t.border}}; overflow: hidden">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="5">
+<div style="display: flex; align-items: center; gap: 12px; height: 54px; padding: 0 16px; border-top: {{o.sep}}">
+<span style="flex-grow: 1; font-size: 16px">{{o.label}}</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{t.text2}}">{{o.sample}}</span>
+<button aria-label="{{o.label}}" aria-pressed="{{o.onStr}}" style="width: 51px; height: 31px; border-radius: 16px; border: 0; background: {{o.track}}; position: relative; padding: 0; flex-shrink: 0"><span style="position: absolute; left: {{o.knob}}; top: 2px; width: 27px; height: 27px; border-radius: 14px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(0,0,0,.25)"></span></button>
+</div>
+</sc-for>
+</div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 84px; box-sizing: border-box; padding: 8px 8px 26px; display: flex; background: {{t.tab}}; border-top: 1px solid {{t.border}}">
+<a href="Main.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"></circle><path d="M10.7 12.3 20 3M16 7l3 3M14 9l2 2"></path></svg>Хранилище</a>
+<a href="Notes.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v6h6M8 13h8M8 17h5"></path></svg>Заметки</a>
+<a href="Generator.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.accent}}; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01" stroke-width="3"></path></svg>Генератор</a>
+<a href="Profile.dc.html" style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: {{t.text2}}; font-size: 11px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Профиль</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const L={bg:'#F3F4F7',surface:'#FFFFFF',surface2:'#E9ECF1',text:'#15171C',text2:'#596072',text3:'#6B7284',border:'#E0E3EA',accent:'#2A55D0',accentSoft:'#E5EBFA',onAccent:'#FFFFFF',danger:'#B8322A',dangerSoft:'#FBE9E7',success:'#1C7447',successSoft:'#E3F2EA',star:'#B7791F',scrim:'rgba(13,15,20,.45)',tab:'rgba(255,255,255,.94)'};
+const D={bg:'#0D0F14',surface:'#161920',surface2:'#1F232C',text:'#ECEEF3',text2:'#A0A7B6',text3:'#8A91A1',border:'#2A2F3A',accent:'#7C9CFF',accentSoft:'#1B2542',onAccent:'#0B1020',danger:'#FF8A80',dangerSoft:'#3A1A19',success:'#6FD39E',successSoft:'#15301F',star:'#F0B44C',scrim:'rgba(0,0,0,.6)',tab:'rgba(22,25,32,.96)'};
+const t=this.props.dark?D:L;
+const chars='k7$Qm2!vRx9#pL4&wZ8e'.split('').map(v=>({v,color:/[0-9]/.test(v)?t.accent:/[A-Za-z]/.test(v)?t.text:t.star}));
+const opts=[['Цифры','0–9',1],['Строчные буквы','a–z',1],['Заглавные буквы','A–Z',1],['Символы','!@#$%',1],['Расширенные символы','{}[]~',0]].map((o,i)=>({label:o[0],sample:o[1],onStr:o[2]?'true':'false',track:o[2]?t.success:t.surface2,knob:o[2]?'22px':'2px',sep:i?'1px solid '+t.border:'0'}));
+return { t, chars, opts };
+}
+}
+</script>
+</body>
+</html>

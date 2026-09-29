@@ -1,0 +1,524 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Code2FA.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "03 Код 2FA",
+      "w": 390,
+      "x": 940,
+      "y": 0
+    },
+    "Code2FADark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "03 Код 2FA",
+      "w": 390,
+      "x": 940,
+      "y": 0
+    },
+    "Credential.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "09 Доступ: сайт",
+      "w": 390,
+      "x": 1410,
+      "y": 1200
+    },
+    "CredentialDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "09 Доступ: сайт",
+      "w": 390,
+      "x": 1410,
+      "y": 1200
+    },
+    "CredentialEdit.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "12 Новый доступ",
+      "w": 390,
+      "x": 0,
+      "y": 2400
+    },
+    "CredentialEditDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "12 Новый доступ",
+      "w": 390,
+      "x": 0,
+      "y": 2400
+    },
+    "CredentialRemote.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "10 Доступ: сервер",
+      "w": 390,
+      "x": 1880,
+      "y": 1200
+    },
+    "CredentialRemoteDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "10 Доступ: сервер",
+      "w": 390,
+      "x": 1880,
+      "y": 1200
+    },
+    "DeleteSheet.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "11 Подтверждение удаления",
+      "w": 390,
+      "x": 2350,
+      "y": 1200
+    },
+    "DeleteSheetDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "11 Подтверждение удаления",
+      "w": 390,
+      "x": 2350,
+      "y": 1200
+    },
+    "Empty.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "15 Пустое хранилище",
+      "w": 390,
+      "x": 1410,
+      "y": 2400
+    },
+    "EmptyDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "15 Пустое хранилище",
+      "w": 390,
+      "x": 1410,
+      "y": 2400
+    },
+    "Generator.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "14 Генератор",
+      "w": 390,
+      "x": 940,
+      "y": 2400
+    },
+    "GeneratorDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "14 Генератор",
+      "w": 390,
+      "x": 940,
+      "y": 2400
+    },
+    "Group.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "08 Группа",
+      "w": 390,
+      "x": 940,
+      "y": 1200
+    },
+    "GroupDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "08 Группа",
+      "w": 390,
+      "x": 940,
+      "y": 1200
+    },
+    "GroupEdit.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "13 Группа: редактирование",
+      "w": 390,
+      "x": 470,
+      "y": 2400
+    },
+    "GroupEditDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "13 Группа: редактирование",
+      "w": 390,
+      "x": 470,
+      "y": 2400
+    },
+    "Login.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "02 Вход",
+      "w": 390,
+      "x": 470,
+      "y": 0
+    },
+    "LoginDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "02 Вход",
+      "w": 390,
+      "x": 470,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "06 Хранилище",
+      "w": 390,
+      "x": 0,
+      "y": 1200
+    },
+    "MainDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "06 Хранилище",
+      "w": 390,
+      "x": 0,
+      "y": 1200
+    },
+    "Note.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "17 Заметка",
+      "w": 390,
+      "x": 470,
+      "y": 3600
+    },
+    "NoteDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "17 Заметка",
+      "w": 390,
+      "x": 470,
+      "y": 3600
+    },
+    "NoteEdit.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "18 Редактор заметки",
+      "w": 390,
+      "x": 940,
+      "y": 3600
+    },
+    "NoteEditDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "18 Редактор заметки",
+      "w": 390,
+      "x": 940,
+      "y": 3600
+    },
+    "Notes.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "16 Заметки",
+      "w": 390,
+      "x": 0,
+      "y": 3600
+    },
+    "NotesDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "16 Заметки",
+      "w": 390,
+      "x": 0,
+      "y": 3600
+    },
+    "PinCreate.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "04 Создание PIN",
+      "w": 390,
+      "x": 1410,
+      "y": 0
+    },
+    "PinCreateDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "04 Создание PIN",
+      "w": 390,
+      "x": 1410,
+      "y": 0
+    },
+    "PinUnlock.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "05 Разблокировка",
+      "w": 390,
+      "x": 1880,
+      "y": 0
+    },
+    "PinUnlockDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "05 Разблокировка",
+      "w": 390,
+      "x": 1880,
+      "y": 0
+    },
+    "Profile.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "19 Профиль",
+      "w": 390,
+      "x": 0,
+      "y": 4800
+    },
+    "ProfileDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "19 Профиль",
+      "w": 390,
+      "x": 0,
+      "y": 4800
+    },
+    "ProfileEdit.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "20 Личные данные",
+      "w": 390,
+      "x": 470,
+      "y": 4800
+    },
+    "ProfileEditDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "20 Личные данные",
+      "w": 390,
+      "x": 470,
+      "y": 4800
+    },
+    "Search.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "07 Поиск",
+      "w": 390,
+      "x": 470,
+      "y": 1200
+    },
+    "SearchDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "07 Поиск",
+      "w": 390,
+      "x": 470,
+      "y": 1200
+    },
+    "Server.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "01 Выбор сервера",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "ServerDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "01 Выбор сервера",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "Sessions.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "22 Устройства",
+      "w": 390,
+      "x": 1410,
+      "y": 4800
+    },
+    "SessionsDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "22 Устройства",
+      "w": 390,
+      "x": 1410,
+      "y": 4800
+    },
+    "Settings.dc.html": {
+      "h": 844,
+      "page": "light",
+      "title": "21 Настройки",
+      "w": 390,
+      "x": 940,
+      "y": 4800
+    },
+    "SettingsDark.dc.html": {
+      "h": 844,
+      "page": "dark",
+      "title": "21 Настройки",
+      "w": 390,
+      "x": 940,
+      "y": 4800
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-29T14:48:22.059Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "page": "light",
+    "view": "canvas"
+  },
+  "notes": {
+    "da": {
+      "kind": "title1",
+      "maxW": 2270,
+      "page": "dark",
+      "text": "Вход и защита",
+      "w": 240,
+      "x": 0,
+      "y": -260
+    },
+    "db": {
+      "kind": "title1",
+      "maxW": 2740,
+      "page": "dark",
+      "text": "Хранилище",
+      "w": 240,
+      "x": 0,
+      "y": 940
+    },
+    "dc": {
+      "kind": "title1",
+      "maxW": 1800,
+      "page": "dark",
+      "text": "Создание и инструменты",
+      "w": 240,
+      "x": 0,
+      "y": 2140
+    },
+    "dd": {
+      "kind": "title1",
+      "maxW": 1330,
+      "page": "dark",
+      "text": "Заметки",
+      "w": 240,
+      "x": 0,
+      "y": 3340
+    },
+    "de": {
+      "kind": "title1",
+      "maxW": 1800,
+      "page": "dark",
+      "text": "Профиль и настройки",
+      "w": 240,
+      "x": 0,
+      "y": 4540
+    },
+    "la": {
+      "kind": "title1",
+      "maxW": 2270,
+      "page": "light",
+      "text": "Вход и защита",
+      "w": 240,
+      "x": 0,
+      "y": -260
+    },
+    "lb": {
+      "kind": "title1",
+      "maxW": 2740,
+      "page": "light",
+      "text": "Хранилище",
+      "w": 240,
+      "x": 0,
+      "y": 940
+    },
+    "lc": {
+      "kind": "title1",
+      "maxW": 1800,
+      "page": "light",
+      "text": "Создание и инструменты",
+      "w": 240,
+      "x": 0,
+      "y": 2140
+    },
+    "ld": {
+      "kind": "title1",
+      "maxW": 1330,
+      "page": "light",
+      "text": "Заметки",
+      "w": 240,
+      "x": 0,
+      "y": 3340
+    },
+    "le": {
+      "kind": "title1",
+      "maxW": 1800,
+      "page": "light",
+      "text": "Профиль и настройки",
+      "w": 240,
+      "x": 0,
+      "y": 4540
+    },
+    "lx": {
+      "fill": "blue",
+      "page": "light",
+      "text": "Платформы. Один макет на iOS и Android. На Android: системная кнопка «Назад», заголовки слева, кнопка «+» как FAB, переключатели в стиле Material. Шрифт Onest (кириллица), пароли — JetBrains Mono.",
+      "w": 320,
+      "x": 2440,
+      "y": 0
+    }
+  },
+  "order": [
+    "Server.dc.html",
+    "Login.dc.html",
+    "Code2FA.dc.html",
+    "PinCreate.dc.html",
+    "PinUnlock.dc.html",
+    "Main.dc.html",
+    "Search.dc.html",
+    "Group.dc.html",
+    "Credential.dc.html",
+    "CredentialRemote.dc.html",
+    "DeleteSheet.dc.html",
+    "CredentialEdit.dc.html",
+    "GroupEdit.dc.html",
+    "Generator.dc.html",
+    "Empty.dc.html",
+    "Notes.dc.html",
+    "Note.dc.html",
+    "NoteEdit.dc.html",
+    "Profile.dc.html",
+    "ProfileEdit.dc.html",
+    "Settings.dc.html",
+    "Sessions.dc.html",
+    "ServerDark.dc.html",
+    "LoginDark.dc.html",
+    "Code2FADark.dc.html",
+    "PinCreateDark.dc.html",
+    "PinUnlockDark.dc.html",
+    "MainDark.dc.html",
+    "SearchDark.dc.html",
+    "GroupDark.dc.html",
+    "CredentialDark.dc.html",
+    "CredentialRemoteDark.dc.html",
+    "DeleteSheetDark.dc.html",
+    "CredentialEditDark.dc.html",
+    "GroupEditDark.dc.html",
+    "GeneratorDark.dc.html",
+    "EmptyDark.dc.html",
+    "NotesDark.dc.html",
+    "NoteDark.dc.html",
+    "NoteEditDark.dc.html",
+    "ProfileDark.dc.html",
+    "ProfileEditDark.dc.html",
+    "SettingsDark.dc.html",
+    "SessionsDark.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "light",
+      "name": "Светлая тема"
+    },
+    {
+      "id": "dark",
+      "name": "Тёмная тема"
+    }
+  ],
+  "title": "PolyCreds Mobile"
+}
