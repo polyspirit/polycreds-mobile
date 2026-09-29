@@ -1,7 +1,7 @@
 # PolyCreds Mobile
 
-Flutter client (Android, iOS) for [PolyCreds / Polypass](https://polypass.polyspirit.tech): passwords, server credentials and notes.
-It talks to the server REST API `/api/v1` (Sanctum bearer tokens). The default server is `https://polypass.polyspirit.tech`; a self-hosted one can be set on the first screen or later in Settings.
+Flutter client (Android, iOS) for PolyCreds / Polypass: passwords, server credentials and notes.
+It talks to the server REST API `/api/v1` (Sanctum bearer tokens). The server URL is set on the first screen or later in Settings.
 
 ## Features
 
