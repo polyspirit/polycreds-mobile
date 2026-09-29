@@ -11,14 +11,16 @@ import '../api/api_client.dart';
 import '../api/models.dart';
 import '../l10n/l10n.dart';
 
-const kDefaultServer = 'https://polypass.polyspirit.tech';
+/// Cloud server offered on the server screen. Set DEFAULT_SERVER in .env and
+/// build with --dart-define-from-file=.env; empty means self-hosted only.
+const kDefaultServer = String.fromEnvironment('DEFAULT_SERVER');
 
 enum SessionStage { loading, server, login, twoFactor, createPin, locked, unlocked }
 
 /// Server choice, auth token, current user and local PIN lock.
 class Session extends ChangeNotifier {
-  Session({ApiClient? api}) {
-    this.api = api ?? ApiClient(serverUrl: kDefaultServer);
+  Session({ApiClient? api, this.defaultServer = kDefaultServer}) : serverUrl = defaultServer {
+    this.api = api ?? ApiClient(serverUrl: defaultServer);
     this.api.onUnauthorized = _onUnauthorized;
   }
 
@@ -32,7 +34,8 @@ class Session extends ChangeNotifier {
   late final ApiClient api;
 
   SessionStage stage = SessionStage.loading;
-  String serverUrl = kDefaultServer;
+  final String defaultServer;
+  String serverUrl;
   User? user;
 
   String? _token;
@@ -50,7 +53,7 @@ class Session extends ChangeNotifier {
 
   Future<void> init() async {
     final all = await _storage.readAll();
-    serverUrl = all['server_url'] ?? kDefaultServer;
+    serverUrl = all['server_url'] ?? defaultServer;
     api.serverUrl = serverUrl;
     _token = all['token'];
     api.token = _token;

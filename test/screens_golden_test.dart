@@ -37,8 +37,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 const _noteJson =
     '{"ops":[{"insert":"Переписать историю"},{"insert":"\\n","attributes":{"header":2}},{"insert":"Склеить последние коммиты перед пушем в "},{"insert":"feature-ветку","attributes":{"bold":true}},{"insert":":\\ngit rebase -i HEAD~3"},{"insert":"\\n","attributes":{"code-block":"plain"}},{"insert":"git push --force-with-lease"},{"insert":"\\n","attributes":{"code-block":"plain"}},{"insert":"Уборка"},{"insert":"\\n","attributes":{"header":2}},{"insert":"Удалить ветки, которых нет на remote: "},{"insert":"git fetch -p","attributes":{"code":true}},{"insert":"\\n","attributes":{"list":"bullet"}},{"insert":"Никогда","attributes":{"italic":true}},{"insert":" не делать force-push в "},{"insert":"main","attributes":{"underline":true}},{"insert":".\\n","attributes":{"list":"bullet"}}]}';
 
+const _server = 'https://vault.example.com';
+
 class FakeApi extends ApiClient {
-  FakeApi() : super(serverUrl: kDefaultServer);
+  FakeApi() : super(serverUrl: _server);
 
   @override
   Future<Credential> credential(int id) async => id == 7
@@ -203,7 +205,7 @@ void main() {
 
   setUp(() {
     final api = FakeApi();
-    session = Session(api: api)
+    session = Session(api: api, defaultServer: _server)
       ..user = const User(id: 1, name: 'Polyspirit', email: 'poly@example.com')
       ..pendingEmail = 'poly@example.com';
     vault = _sampleVault(api);

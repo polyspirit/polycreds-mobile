@@ -4,9 +4,14 @@ library;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:polycreds/api/api_client.dart';
 
-/// Hits the live server. Run with: flutter test --run-skipped -t network
+/// Hits the live server from .env. Run with:
+/// flutter test --run-skipped -t network --dart-define-from-file=.env
 void main() {
-  const server = 'https://polypass.polyspirit.tech';
+  const server = String.fromEnvironment('DEFAULT_SERVER');
+  if (server.isEmpty) {
+    test('DEFAULT_SERVER is set', () {}, skip: 'DEFAULT_SERVER is not set, pass --dart-define-from-file=.env');
+    return;
+  }
 
   test('probe accepts PolyCreds server', () async {
     await ApiClient(serverUrl: server).probe(server);

@@ -17,7 +17,8 @@ class ServerScreen extends StatefulWidget {
 
 class _ServerScreenState extends State<ServerScreen> {
   late final Session _session = context.read<Session>();
-  late bool _custom = _session.serverUrl != kDefaultServer;
+  late final bool _hasDefault = _session.defaultServer.isNotEmpty;
+  late bool _custom = !_hasDefault || _session.serverUrl != _session.defaultServer;
   late final _url = TextEditingController(text: _custom ? _session.serverUrl : 'https://');
   bool _busy = false;
   String? _error;
@@ -29,7 +30,7 @@ class _ServerScreenState extends State<ServerScreen> {
   }
 
   Future<void> _continue() async {
-    final url = _custom ? _url.text.trim() : kDefaultServer;
+    final url = _custom ? _url.text.trim() : _session.defaultServer;
     if (_custom && (url.isEmpty || url == 'https://' || Uri.tryParse(ApiClient.normalizeServerUrl(url))?.host.isEmpty != false)) {
       setState(() => _error = context.l.enterServer);
       return;
@@ -74,17 +75,19 @@ class _ServerScreenState extends State<ServerScreen> {
                   const SizedBox(height: 28),
                   SectionLabel(context.l.serverSection),
                   const SizedBox(height: 10),
-                  _Option(
-                    selected: !_custom,
-                    onTap: () => setState(() {
-                      _custom = false;
-                      _error = null;
-                    }),
-                    title: Uri.parse(kDefaultServer).host,
-                    subtitle: context.l.cloudDefault,
-                    trailing: Icon(LucideIcons.cloud, size: 22, color: c.accent),
-                  ),
-                  const SizedBox(height: 10),
+                  if (_hasDefault) ...[
+                    _Option(
+                      selected: !_custom,
+                      onTap: () => setState(() {
+                        _custom = false;
+                        _error = null;
+                      }),
+                      title: Uri.parse(_session.defaultServer).host,
+                      subtitle: context.l.cloudDefault,
+                      trailing: Icon(LucideIcons.cloud, size: 22, color: c.accent),
+                    ),
+                    const SizedBox(height: 10),
+                  ],
                   _Option(
                     selected: _custom,
                     onTap: () => setState(() {

@@ -31,11 +31,22 @@ design/       mockups the UI follows
 
 Secrets (token, PIN hash) live in `flutter_secure_storage` (Keychain / Android Keystore). Preferences live in `shared_preferences`.
 
+## Configuration
+
+The default (cloud) server is not stored in the repository. Copy `.env.example` to `.env` (ignored by git) and set `DEFAULT_SERVER`:
+
+```bash
+cp .env.example .env
+```
+
+Pass the file to every `flutter run` / `flutter build` / `flutter test` with `--dart-define-from-file=.env`. Without it the app offers only a self-hosted server.
+
 ## Run
 
 ```bash
 flutter pub get
-flutter run
+flutter run --dart-define-from-file=.env
+flutter build apk --dart-define-from-file=.env
 ```
 
 ## Tests
@@ -44,7 +55,7 @@ flutter run
 flutter analyze
 flutter test                                   # golden screenshots of the screens (test/goldens)
 flutter test --update-goldens test/screens_golden_test.dart   # regenerate after UI changes
-flutter test --run-skipped -t network          # smoke tests against the live server
+flutter test --run-skipped -t network --dart-define-from-file=.env   # smoke tests against DEFAULT_SERVER
 ```
 
 ## Localization
